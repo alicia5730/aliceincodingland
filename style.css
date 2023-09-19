@@ -1,0 +1,407 @@
+
+body{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/black color.jpg");
+}
+
+/*-------------------------------monster----------------------------- ---*/
+
+#cheer{
+display: flex;
+    float: right;
+}
+.monster{
+    margin: 10px auto 20px;
+    display: block;
+    position: relative;
+    height: 200px;
+    width: calc(2600px/13);
+    overflow: hidden;
+    background: url(img/monster3.png);
+    animation: animateMonster 2s steps(13) infinite;
+}
+@keyframes animateMonster {
+    100%{
+        background-position: -2600px,0;
+    }
+
+}
+
+/*------------------------------------------- home page */
+
+html{
+  scroll-behavior: smooth ;
+}
+.background-colors{
+    position: absolute;
+    border-radius: 100%;
+}
+.start-screen{
+    text-decoration: none;
+
+}
+#wrapper{
+    margin: auto;
+    padding: 5%;
+    color: white;
+    font-size: 1.3vw;
+}
+
+#wrapper-email{
+    margin: 5%;
+    position: relative;
+    display: grid;
+    /* margin-right: auto; */
+    justify-items: center;
+}
+
+/*-----------------Header--------------------------------*/
+#header{
+    background: black;
+    /* position: absolute; */
+    width: 100%;
+    padding-bottom: 50px;
+}
+#headerContact{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.text-button{
+    text-decoration: none;
+    color: white;
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    transition: ease-in 0.2s;
+}
+#menu a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.text-button:hover{
+    background: #ff64e4 ;
+    transition: ease-in 0.2ms ;
+}
+#menu{
+    display: flex;
+    position: initial;
+    justify-items: start;
+    float: right;
+    font-size: 2vw;
+    overflow: hidden;
+}
+#menu .icon{
+    display: none;
+}
+#menu a.active {
+    background-color:white;
+    color: white;
+}
+/*-----------------------intro section */
+#intro{
+    margin-bottom: 100px;
+}
+#name{
+    font-family: "Agency FB", fantasy;
+    margin: 0 auto;
+    margin-left: 20px;
+    font-size: 10vw;
+}
+
+#profile-images {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+}
+
+.profile-photo{
+    width: 100%;
+}
+
+#images-section-profile{
+    width: 100%;
+    background-size: contain;
+}
+#Bio-me{
+    text-decoration: none;
+    padding: 1vw;
+    background: #ff64e4;
+    color: white;
+    font-size: 2vw;
+    float: left;
+}
+/*--------------------------------------------BIO---------------------------------------------------------------*/
+#profile-info{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    margin-bottom: 100px;
+}
+#text-profile{
+    float: left;
+    width: 50%;
+    padding-right: 20%;
+}
+#about {
+    width: 100%;
+    margin-right: 10px;
+
+}
+
+#bioSect{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    flex-wrap: nowrap;
+
+}
+#about,#profile-info{
+}
+.slideshow {
+    box-sizing: border-box;
+    float: right;
+    position: inherit;
+    display: grid;
+    align-items: center;
+}
+.slideshow img{
+    position:absolute;
+    animation:slideshow 15s infinite;
+    width: 20%;
+}
+@keyframes slideshow {
+    25%{opacity:1;
+    }
+    45%{
+        opacity:0;
+    }
+}
+
+.slideshow img:nth-child(3){animation-delay:0s;}
+.slideshow img:nth-child(2){animation-delay:5s;}
+.slideshow img:nth-child(1){animation-delay:10s;}
+/*--------------------------ABOUT-------------------------*/
+section{
+    display: block;
+}
+#Geleerd{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-about{
+    text-decoration: none;
+    padding: 1vw;
+    background: #ff64e4;
+    color: white;
+    font-size: 2vw;
+    float: left;
+}
+
+
+.content{
+    height: 200px;
+    width: 325px;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
+}
+.content .images{
+    height: 100%;
+    width: 100%;
+}
+.images img{
+    height: 100%;
+    width: 100%;
+}
+.list{
+    margin-left: -30px
+}
+#list-skills,#list-leren,#list-interest{
+    margin-left: -30px;
+}
+#points{
+    display: flex;
+}
+#Skills,#Leren,#interest{
+    margin-left: 0%;
+    border-right: white 3px solid;
+    padding-right: 8%;
+}
+#Leren,#interest{
+    padding-left: 8%;
+}
+
+/*---------------footer--------------------------------------*/
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+    display:none;
+    background-color: transparent;
+}
+#footer{
+    width: 100%;
+    height: 200px;
+        background: black;
+    margin-top:20px;
+}
+
+/*--------------------------Contact Form---------------------*/
+
+#contact-form{
+    font-family: monospace;
+    font-size: 30px;
+    width: 100%;
+    background: transparent;
+}
+#form{
+    padding: 0px 5%;
+    padding-bottom: 0;
+    color: white;
+}
+input, textarea{
+    border: 2px solid #00bbe4;
+    border-radius: 3px;
+    background: black;
+    color: white;
+    width: 80%;
+}
+
+#button{
+    width: 20%;
+    height: 50px;
+    background-color: #00bbe4;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#name-form,#email-form,#subject, #tel-form{
+    width: 80%;
+    border: 2px solid #00bbe4;
+    border-radius: 3px;
+    background: black;
+    color: white;
+    height: 30px;
+
+
+}
+#bericht-form{
+    height: 80px;
+    resize: vertical;
+    background-size: cover;
+    color: white;
+}
+#sent{
+     margin: auto;
+     padding: 10px;
+    color: white;
+ }
+#mail-gif{
+}
+/*------------------------------------------------------Admin page------------------------------------------------------------------------- */
+#text-danger{
+    color: red;
+}
+#head-title{
+    text-align: center;
+}
+#table{
+    border: 1px solid navajowhite;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    border-collapse: collapse;
+    font-family: monospace;
+    text-align: left;
+    font-size: 16px;
+}
+#table th{
+    color: navajowhite ;
+    background-color: cadetblue;
+    border-right: 1px solid navajowhite;
+
+}
+#table td{
+    color: cadetblue ;
+    background: navajowhite;
+    border-right: 1px solid cadetblue;
+}
+/*------------------------------------------------responsive------------------------------------*/
+@media all and (min-width: 700px) {
+
+}
+@media all and (min-width: 320px) and (max-width: 600px) {
+    #wrapper{
+        font-size: 2vw;
+    }
+    #menu{
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        font-size: 4vw;
+    }
+    #menu a{
+        margin-right: 0;
+    }
+    a.icon{
+        text-align: left;
+        padding-left: 10px;
+        color: #00bbe4;
+    }
+    #points{
+        display: grid;
+    }
+
+    #images-section-profile{
+        margin-top: 100px;
+    }
+    #nav-bar, .textbanner, .text-button{
+         float: none;
+     }
+
+    #menu a:not(:first-child) {display: none;}
+    #menu a.icon {
+        display: block;
+        height: 40px;
+        font-size: 30px;
+        background: black;
+    }
+
+
+    #menu.responsive {
+        position: absolute;
+        background: #00bbe4;
+    }
+    #menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+
+    }
+    #Skills, #Leren, #interest{
+        border: none;
+        padding-left: 0px;
+    }
+
+
+    #profile-info,#about{
+        float: none;
+        width: 100%;
+    }
+    #profile-info{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media all and (min-width: 2200px){
+
+
+}

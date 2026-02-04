@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4d4348d9-9b78-4622-a0cf-acf0f0b79ec2" name="takeapicwithpride" url="http://ftp.takeapicwithpride.com">
+        <fileTransfer host="ftp.takeapicwithpride.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0234966d-6263-4f8d-a594-0c382640ccc2" name="localhost" url="http://localhost/takeapic">
+        <fileTransfer mountedRoot="C:\xampp3\htdocs\takepic" accessType="MOUNT" port="0" />
+      </webServer>
+      <webServer id="84c5044b-bbf8-4b2e-8d91-69ad8628ec7a" name="aliceincodingland" url="http://ftp.aliceincodingland.com">
+        <fileTransfer host="ftp.aliceincodingland.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

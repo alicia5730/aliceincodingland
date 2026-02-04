@@ -2,15 +2,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
-    <link rel = "icon" type = "image/png" href = "../img/LogoMakr_9pgnAN.png">
-    <link href="testStyle.css" rel="stylesheet">
+    <link rel = "icon" type = "image/png" href = "img/LogoMakr_9pgnAN.png">
+    <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
-<div id="socialLogos">
+<!--<div id="socialLogos">
     <a href="../CV%20Alicia%20Fernandes.pdf"><img src="../img/cv.png" class="logo"></a>
     <a href="https://www.linkedin.com/in/alicia-fernandes-747669192" class="text-button"><img src="../img/linkedin.png" class="logo"></a>
     <a href="https://github.com/alicia573" class="text-button"><img src="../img/github.png" class="logo"></a>
-</div>
+</div>-->
+<div id="menuPlusPage">
 <div id="menu">
     <div id="hamburger" onclick="toggleMenu()">
         ☰

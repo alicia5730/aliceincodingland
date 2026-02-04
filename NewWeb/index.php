@@ -4,16 +4,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
     <link rel = "icon" type = "image/png" href = "../img/LogoMakr_9pgnAN.png">
-    <link href="testStyle.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
-    <body style="opacity: inherit; transition: opacity 0s;">
-    <div id="socialLogos">
+    <body style="opacity: inherit; transition: opacity 0s;background: #fafad2;">
+<!--    <div id="socialLogos">
         <a href="../CV%20Alicia%20Fernandes.pdf"><img src="../img/cv.png" class="logo"></a>
         <a href="https://www.linkedin.com/in/alicia-fernandes-747669192" class="text-button"><img src="../img/linkedin.png" class="logo"></a>
         <a href="https://github.com/alicia573" class="text-button"><img src="../img/github.png" class="logo"></a>
-    </div>
-    <div id="wrapper" class="wrapperIndex">
+    </div>-->
+    <div class="wrapperIndex">
         <div id="profile-images">
             <p class="name">Alicia </br>Fernandes</p>
                 <img class="profile-photo" src="../img/ProfilePhoto.jpg" alt="profile-photo">

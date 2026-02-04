@@ -2,44 +2,56 @@
 require "Header.php";
 ?>
 
-<div id="skills-info" class="pages-background" >
+<div id="skills-info" class="pages-background" style="height: auto;text-align: center;">
     <h1>Skills</h1>
     <div class="wrapper-skills">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" >
-            <div class="click-on-me" onclick="hideOnClick('click-on-me')">Click me</div>
+            <img src="../img/trees.jpg" alt="" >
             <div class="info">
                 <h1>PHP</h1>
-                <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+                <p>PHP is a language I used during my first year in ROC MBO Flevoland(Software development). I also did my end project using php.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="">
+            <img src="../img/beach.jpg" alt="">
             <div class="info">
                 <h1>SQL</h1>
-                <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+                <p>This language is something I really like to use while working with databases and have fun while making the tables and see what kind of query to use.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="">
+            <img src="../img/book.jpg" alt="">
             <div class="info">
                 <h1>HTML/CSS</h1>
-                <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+                <p>HTML and CSS are the most used languages, and I am also part of the people who uses this language a lot. I have first worked with it in my first year.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/potrait.jpg" alt="">
+            <div class="info">
+                <h1>Command Line Proficiency</h1>
+                <p>During my college years, I have used the command lines. To find specific files or for some other quests.</p>
             </div>
         </div>
 
     </div>
 </div>
 <script>
-    function hideOnClick(className) {
-        // Get all elements with the specified class name
-        const elements = document.querySelectorAll('.' + className);
 
-        // Loop through the list of elements and hide each one
-        elements.forEach(element => {
-            element.style.display = 'none';
-        });
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check if the user has visited the page before
+        if (!localStorage.getItem('visitedBefore')) {
+            // If not, add the simulate-hover class to the first card
+            const firstCard = document.querySelector('.card');
+            if (firstCard) {
+                firstCard.classList.add('simulate-hover');
+            }
+
+            // Set the visitedBefore flag in localStorage
+            localStorage.setItem('visitedBefore', 'true');
+        }
+    });
+
 </script>

@@ -1,0 +1,93 @@
+.bodyOfTheMenuPages{
+    font-family: "Alice", serif;
+    margin: 40px;
+}
+
+#myPhoto{
+    width: 300px;
+    float: left;
+    border-radius: 10%;
+    margin: 0px 40px 40px 0px;
+}
+
+#abouteMeArticle{
+    font-size: 22px;
+}
+b{
+    color: #6391e6;
+}
+/*/glitter effect */
+
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 100%;
+    animation: glitter 2.5s infinite ease-in-out; /* Smooth animation with ease-in-out */
+}
+@keyframes glitter {
+    0%, 100% {
+        transform: translateY(0) scale(3);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50px) scale(3.5);
+        opacity: 0.5;
+    }
+}
+
+
+
+
+/*--------------skills page-------------------------------------------------------------------------------------------*/
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.main {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skill {
+    background: #6391e6;
+    color: #fff;
+    margin: 10px;
+    border-radius: 5px;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .skill {
+        width: 100%;
+    }
+}
+/*-------------------------my works page -------------------------------------------------------*/
+.containerProject{
+    display: flex;
+    flex-direction: column;
+}
+.containerProject p{
+    font-weight: 800;
+    font-size: 18px;
+}
+.infoProject article{
+}
+
+.infoProject img{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 20px;
+}
+/*-------------------responsive -------------------------------------*/
+

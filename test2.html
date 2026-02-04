@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cute-line {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .line-body {
+            width: 100px;
+            height: 5px;
+            background-color: pink; /* Cute color */
+            border: 2px dashed #FF69B4; /* Dashed line for fun */
+            position: relative;
+            z-index: 1;
+        }
+
+        .decoration {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%; /* Circle shape */
+            position: relative;
+            z-index: 2;
+            background-color: #FF69B4; /* Pink color */
+        }
+
+        .decoration-start {
+            margin-right: -7.5px; /* Half of the decoration's width to overlap with the line */
+        }
+
+        .decoration-end {
+            margin-left: -7.5px; /* Half of the decoration's width to overlap with the line */
+        }
+
+    </style>
+</head>
+<body>
+<div class="button-container">
+    <button class="btn">Button 1</button>
+
+    <div class="cute-line">
+        <div class="decoration decoration-start"></div>
+        <div class="line-body"></div>
+        <div class="decoration decoration-end"></div>
+    </div>
+
+    <button class="btn">Button 2</button>
+</div>
+</body>
+</html>

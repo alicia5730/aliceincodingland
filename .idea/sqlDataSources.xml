@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="adf1be4a-5f19-4406-93a8-a464d09e9913" name="@auth-db861.hstgr.io Mapping">
+      <data-sources db="ca9c072b-a466-4e3a-a5a2-586610135010" ddl="c2b6e8a0-d2ed-4650-ab61-d8407bf03f2a" />
+      <scope>
+        <node kind="database" qname="@">
+          <node kind="schema" qname="@" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

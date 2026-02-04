@@ -1,0 +1,388 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:#E0F2F1;
+}
+/*------------------------------home-----------------------------*/
+#firstTitle{
+    /*color:  ;*/
+}
+
+#firstTitle{
+    color:#E91E63 ;
+    font-size: clamp(16px,6vw,60px);
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Bodoni Moda', serif;
+    font-family: 'Playfair Display', serif;
+}
+#title-slogan-wrap{
+    padding: 0;
+    margin:10px;
+    font-weight: bolder;
+    color: black;
+}
+#slogan{
+    font-size: clamp(16px,2vw,20px);
+}
+.slogan-color{
+    color:#E91E63 ;
+}
+#header-tap{
+    width: 20%;
+}
+#lr-wrap a{
+    color: #212121;
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 24px);
+}
+#lr-wrap{
+    display: flex;
+    justify-content: space-evenly;
+}
+#contact-in-header{
+margin-right: 10rem;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header input[type="text"] {
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+main {
+    padding: 20px;
+}
+
+#image-banner{
+
+}
+
+#article-text{
+    background: #FFF0F5 ;
+    width: 33.33%;
+    padding: 10px;
+    color: #333 ;
+    border-radius: 20px;
+    float: left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/*-------------monster--------------------*/
+#monster {
+    width: 200px;
+    height: 200px;
+    background-color: #E91E63;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#camera {
+    width: 60px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+}
+
+@keyframes flash {
+    0%, 100% {
+        box-shadow: 0 0 10px 5px white;
+    }
+    50% {
+        box-shadow: 0 0 50px 25px white;
+    }
+}
+
+#camera:hover {
+    animation: flash 0.5s ease-in-out infinite;
+}
+
+/*----------Register and Login page--------------------------*/
+#wrap-pijl{
+    margin: 0 25px;
+    display: block;
+    text-align: left;
+    position: absolute;
+}
+#pijl{
+    text-decoration: none;
+    font-size: 3vw;
+    color: #e91e63;
+    border-radius: 100px;
+    background: white;
+    padding: 20px;
+    box-shadow: 8px 5px 5px black;
+}
+#formDiv{
+display: block;
+text-align: center;
+margin-top: 100px;
+}
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #E91E63;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 8px 5px 5px black;
+}
+.fields {
+width: 200px;
+height: 30px;
+margin: 10px 0;
+}
+.form input{
+border: 1px solid #FFF0F5;
+width: 100%;
+border-radius: 10px;
+padding-left: 10px;
+}
+
+#reg-title{
+font-weight: bold;
+font-size: 24px;
+text-align: center;
+}
+.sub-button{
+    float: right;
+    font-size: 1.4vw;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    box-shadow: 8px 5px 5px black;
+}
+/* Further details and animations can be added here */
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+/*--------------------------------------------------------------------User Dashboard    */
+#lr-wrap-user a{
+    color: #212121;
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 24px);
+}
+#lr-wrap-user{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#dashboard_page{
+
+}
+
+#profile_information_div{
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    background: #191970;
+    border-radius: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+#profile_information{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 2%;
+    font-size: clamp(12px, 2vw, 21px);
+    padding-left: 5%;
+    line-height: 0.2;
+}
+
+#profile_image{
+    float: left;
+    /*background: white;*/
+    border-radius: 100%;
+    height: 200px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+#pff_info{
+    display:flex ;
+    justify-content: space-between; /* This should evenly space the child elements */
+    width: 65%;
+    line-height: 1.6;
+}
+.transparantFont{
+    font-weight:lighter ;
+
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*---------Message Modal-------------*/
+.message-modal {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #888;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000; /* Sit on top */
+}
+
+.message-modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+
+.close-message {
+    color: #aaa;
+    float: right;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-message:hover,
+.close-message:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*----Logoutbtn-----*/
+
+#buttonLogout{
+    width: 5vw;
+    display: block;
+    background: none;
+    border: none;
+
+}
+#imgLogout{
+    width: -webkit-fill-available;
+    cursor: pointer;
+}
+
+
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-content {
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    #article-text{
+        width: auto;
+    }
+}

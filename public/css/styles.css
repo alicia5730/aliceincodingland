@@ -1,0 +1,449 @@
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Alice', serif;
+    justify-content: center;
+    align-items: center;
+}
+#homepage{
+    background: #9cd5e4;
+}
+/*---------------------------start screen-------------------------------------------------------------------------------*/
+/* Keyhole effect */
+/* Keyhole effect */
+#keyhole-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#keyhole-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.keyhole {
+    width: 100px;
+    height: 200px;
+    background: transparent;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+}
+
+.keyhole::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes keyhole-zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(50);
+    }
+}
+
+#keyhole-overlay.show .keyhole {
+    animation: keyhole-zoom 8s forwards ease-in-out; /* Smooth animation with ease-in-out */
+}
+
+/* Glitter effect */
+#glitter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: transparent;
+    overflow: hidden;
+    z-index: 2000;
+    opacity: 0;
+}
+
+#glitter-overlay.show {
+    opacity: 1;
+    animation: glitter-fadeout 8s forwards ease-in-out; /* Smooth animation with ease-in-out */
+}
+
+@keyframes glitter-fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes glitter {
+    0%, 100% {
+        transform: translateY(0) scale(3);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50px) scale(3.5);
+        opacity: 0.5;
+    }
+}
+
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: glitter 2.5s infinite ease-in-out; /* Smooth animation with ease-in-out */
+}
+
+.glitter:nth-child(odd) {
+    animation-duration: 4.5s; /* Smooth animation with ease-in-out */
+}
+
+.glitter:nth-child(even) {
+    animation-duration: 2s; /* Smooth animation with ease-in-out */
+}
+
+
+/*----------ending of keyhole effect*/
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.zoom-in {
+    transform: scale(5);
+    opacity: 0;
+}
+
+#start-screen {
+    background: url("../img/aiw_background_4k.png");
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcome {
+    font-size: 40px;
+    background-color: #7a1f5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px #661945;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: float 6s ease-in-out infinite;
+
+}
+
+#welcome:hover {
+    background-color: #a14280;
+    box-shadow: 0 6px #561536;
+    transform: translateY(-2px);
+}
+/*---------------------------------------------------------homepage-----------------------------------------------------*/
+* {
+    cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+}
+
+/*--------------------welcome animation-------------------------------------*/
+
+#welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    gap: 20px;
+    padding-top: 100px
+}
+
+.welcome-letter {
+    opacity: 0;
+    animation: easeIn 1s forwards;
+}
+
+.welcome-letter:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.welcome-letter:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.welcome-letter:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.welcome-letter:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.welcome-letter:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.welcome-letter:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.welcome-letter:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.welcome-letter:nth-child(8) {
+    animation-delay: 1.4s;
+}
+.welcome-letter:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+.welcome-letter:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+.welcome-letter:nth-child(11) {
+    animation-delay: 2s;
+}
+
+.welcome-letter:nth-child(12) {
+    animation-delay: 2.2s;
+}
+
+.welcome-letter:nth-child(13) {
+    animation-delay: 2.4s;
+}
+
+.welcome-letter:nth-child(14) {
+    animation-delay: 2.6s;
+}
+
+.welcome-letter:nth-child(15) {
+    animation-delay: 2.8s;
+}
+
+.welcome-letter:nth-child(16) {
+    animation-delay: 3s;
+}
+
+.welcome-letter:nth-child(17) {
+    animation-delay: 3.2s;
+}
+
+.welcome-letter:nth-child(18) {
+    animation-delay: 3.4s;
+}
+
+.welcome-letter:nth-child(19) {
+    animation-delay: 3.6s;
+}
+
+.welcome-letter:nth-child(20) {
+    animation-delay: 3.8s;
+}
+
+@keyframes easeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*--------------------welcome animation ending-------------------------------------*/
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Ensure menu is above background animations */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Add transition for smoother shrinking */
+}
+
+#main-menu.shrink {
+    transform: scale(0.5) translateY(-200%); /* Shrink and move to top */
+}
+
+.chars {
+    width: 300px; /* Adjust size as needed */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center; /* Ensures scaling happens from the center */
+    cursor: pointer;
+    will-change: transform; /* Prevents blurring on hover */
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.chars:hover {
+    transform: scale(1.1) translateZ(0); /* Zoom in effect with translateZ to prevent blurring */
+}
+
+.hidden {
+    display: none;
+}
+
+#infoFrame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    height: 80%;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 3; /* Ensure iframe is above the background elements */
+    transition: transform 1s ease-out; /* Animate the rolling in effect */
+}
+
+#infoFrame.active {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#backButton {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6391e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 4; /* Ensure button is above the iframe */
+}
+
+#backButton:hover {
+    background-color: #0056b3;
+}
+
+#overlay {
+    display: none; /* Ensure overlay is hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure overlay is above the main menu but below the iframe and button */
+}
+
+/* Teacup styles */
+.teacup {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
+    animation: rotate 5s infinite alternate ease-in-out;
+    z-index: 1; /* Ensure teacups are below the main menu and other elements */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+#game_container{
+    text-align: center;
+    padding-top: 50px;
+
+}
+#play{
+    height: 70px;
+    width: 200px;
+    background: #6391e6;
+    border: none;
+    color: white;
+    font-size: 2em;
+    font-family: 'Alice', serif;
+}
+/*-----------------------responsive------------------------------------------------------*/
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #welcome-container {
+        font-size: 2em;
+        padding-top: 50px;
+        gap: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #main-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .chars {
+        width: 60vw;
+        max-width: 250px;
+        margin: 0;
+    }
+    #main-menu.shrink {
+        transform: none;
+    }
+}

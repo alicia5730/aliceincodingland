@@ -206,6 +206,10 @@ body, html {
     padding-top: 100px
 }
 
+.welcome-line {
+    display: flex;
+}
+
 .welcome-letter {
     opacity: 0;
     animation: easeIn 1s forwards;
@@ -316,7 +320,7 @@ body, html {
 }
 
 .chars {
-    width: 300px; /* Adjust size as needed */
+    width: 20%; /* Adjust size as needed */
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center; /* Ensures scaling happens from the center */
     cursor: pointer;
@@ -421,16 +425,23 @@ body, html {
 }
 /*-----------------------responsive------------------------------------------------------*/
 @media (max-width: 600px) {
-    body {
+    body, html {
+        overflow-y: auto;
         overflow-x: hidden;
     }
 
     #welcome-container {
-        font-size: 2em;
-        padding-top: 50px;
-        gap: 10px;
-        flex-wrap: wrap;
+        flex-direction: column;
         text-align: center;
+        gap: 12px;
+        padding-top: 40px;
+        font-size: 2.1em;
+    }
+
+    .welcome-line {
+        gap: 8px;
+        display: flex;
+        justify-content: center;
     }
     #main-menu {
         flex-direction: column;
@@ -447,3 +458,19 @@ body, html {
         transform: none;
     }
 }
+@media (max-width: 360px) {
+    #welcome-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding-top: 40px;
+        font-size: 2.1em;
+    }
+
+    .welcome-line {
+        gap: 8px;
+        display: flex;
+        justify-content: center;
+    }
+}
+

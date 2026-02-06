@@ -6,9 +6,15 @@ body, html {
     font-family: 'Alice', serif;
     justify-content: center;
     align-items: center;
+    background-image:
+        url("../img/tea-party.png"),
+        linear-gradient(135deg, #A7C7FF, #FFB3D1, #C8B7FF);
+    background-size: 400px auto, cover;  /* downsize the huge image */
+    background-repeat: repeat;
+    background-blend-mode: color-burn;
 }
 #homepage{
-    background: #9cd5e4;
+
 }
 /*---------------------------start screen-------------------------------------------------------------------------------*/
 /* Keyhole effect */
@@ -358,25 +364,7 @@ body, html {
     transform: translate(-50%, -50%) scale(1);
 }
 
-#backButton {
-    display: none;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #6391e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 4; /* Ensure button is above the iframe */
-}
 
-#backButton:hover {
-    background-color: #0056b3;
-}
 
 #overlay {
     display: none; /* Ensure overlay is hidden initially */
@@ -389,6 +377,24 @@ body, html {
     justify-content: center;
     align-items: center;
     z-index: 2; /* Ensure overlay is above the main menu but below the iframe and button */
+}
+.overlay-inner {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+/* Around tablet size: let it stretch more */
+@media (max-width: 900px) {
+    .overlay-inner {
+        width: 95%;
+        height: 90vh;
+    }
 }
 
 /* Teacup styles */
@@ -417,11 +423,13 @@ body, html {
 #play{
     height: 70px;
     width: 200px;
-    background: #6391e6;
+    background: #C8B7FF;
     border: none;
-    color: white;
+    color: #333;
     font-size: 2em;
     font-family: 'Alice', serif;
+    visibility: hidden;
+
 }
 /*-----------------------responsive------------------------------------------------------*/
 @media (max-width: 600px) {
@@ -453,6 +461,7 @@ body, html {
         width: 60vw;
         max-width: 250px;
         margin: 0;
+        cursor: pointer;
     }
     #main-menu.shrink {
         transform: none;

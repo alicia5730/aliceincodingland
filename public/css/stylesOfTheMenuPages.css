@@ -1,23 +1,55 @@
-.bodyOfTheMenuPages{
+/* --------- Global / About Me page --------- */
+
+.bodyOfTheMenuPages {
     font-family: "Alice", serif;
     margin: 40px;
 }
 
-#myPhoto{
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(99, 145, 230, 0.25);
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #1d2654;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #ffffff;
+    transform: translateX(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+
+/* Photo on about page */
+#myPhoto {
     width: 300px;
     float: left;
     border-radius: 10%;
-    margin: 0px 40px 40px 0px;
+    margin: 0 40px 40px 0;
 }
 
-#abouteMeArticle{
+#abouteMeArticle {
     font-size: 22px;
 }
-b{
+
+b {
     color: #6391e6;
 }
-/*/glitter effect */
 
+/* Glitter effect */
 .glitter {
     position: absolute;
     width: 5px;
@@ -25,8 +57,9 @@ b{
     background: white;
     border-radius: 50%;
     opacity: 100%;
-    animation: glitter 2.5s infinite ease-in-out; /* Smooth animation with ease-in-out */
+    animation: glitter 2.5s infinite ease-in-out;
 }
+
 @keyframes glitter {
     0%, 100% {
         transform: translateY(0) scale(3);
@@ -37,57 +70,350 @@ b{
         opacity: 0.5;
     }
 }
+@media (max-width: 480px) {
 
-
-
-
-/*--------------skills page-------------------------------------------------------------------------------------------*/
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-.main {
-    padding: 20px;
-    background: #fff;
-    margin-top: 20px;
-}
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.skill {
-    background: #6391e6;
-    color: #fff;
-    margin: 10px;
-    border-radius: 5px;
-    width: 45%;
-    box-sizing: border-box;
-    text-align: center;
-}
-@media (max-width: 600px) {
-    .skill {
-        width: 100%;
+    #abouteMeArticle{
+        display: inline-block;
     }
 }
-/*-------------------------my works page -------------------------------------------------------*/
-.containerProject{
+/* --------- Skills page --------- */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+/* SKILLS GRID */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+/* INDIVIDUAL SKILL CARD */
+.skill {
+    background: rgba(255, 255, 255, 0.35); /* glass vibe */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 18px;
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* soft drop shadow like floating cards */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* TITLE INSIDE EACH SKILL */
+.skill h3 {
+    color: #1d2654;
+    font-size: 1.1rem;
+    margin: 0;
+    letter-spacing: 0.6px;
+}
+
+/* HOVER EFFECT */
+.skill:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+/* RESPONSIVE SPACER FOR SMALL SCREENS */
+@media (max-width: 600px) {
+    .skill {
+        padding: 1rem;
+    }
+    .skill h3 {
+        font-size: 1rem;
+    }
+    .bodyOfTheMenuPages{
+        margin: 10px;
+    }
+}
+
+/* ===========================================
+   MY WORKS PAGE
+   =========================================== */
+
+/* Container for all projects */
+#containerWork {
+    max-width: 1100px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+}
+
+/* Page title tweak when using My Works */
+.bodyOfTheMenuPages h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Project card */
+.containerProject {
+    background: #f7f7ff;
+    border-radius: 20px;
+    padding: 1.75rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Title inside card */
+.containerProject h3 {
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+    font-size: 1.4rem;
+}
+
+/* Layout inside card: image + text */
+.infoProject {
     display: flex;
-    flex-direction: column;
-}
-.containerProject p{
-    font-weight: 800;
-    font-size: 18px;
-}
-.infoProject article{
+    gap: 1.5rem;
+    align-items: flex-start;
 }
 
-.infoProject img{
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin-right: 20px;
+/* Project image */
+.infoProject img {
+    display: block;
+    width: 220px;
+    max-width: 40vw;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
-/*-------------------responsive -------------------------------------*/
 
+/* Text column – base style for ALL projects (Bit, BierHier, etc.) */
+.infoProject article {
+    flex: 1;
+}
+
+/* Paragraphs in project text */
+.infoProject article p {
+    font-weight: 400;
+    font-size: 0.98rem;
+    margin: 0 0 0.75rem 0;
+}
+
+/* Lists in your template */
+.infoProject article ul,
+.infoProject article ol {
+    margin: 0.25rem 0 0.75rem 1.2rem;
+    padding: 0;
+}
+
+/* Links like “Read more.” / Prototype / etc. */
+.link-visibility,
+.infoProject article a {
+    color: #6391e6;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.link-visibility:hover,
+.infoProject article a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================================
+   PROJECT SECTION HEADERS (H4) – all projects
+   =========================================== */
+
+.infoProject article h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #1d2654;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.infoProject article h4::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #6391e6;
+    border-radius: 2px;
+    margin-top: 3px;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .infoProject article h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+    }
+}
+
+/* ===========================================
+   DETAILED 2ND-YEAR PROJECTS (with sidebar)
+   =========================================== */
+
+/* Only projects with class containerProject--detailed get TOC layout */
+.containerProject--detailed .infoProject article {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* Sidebar column */
+.containerProject--detailed .toc-sidebar {
+    flex: 0 0 210px;
+    font-size: 0.9rem;
+    background: #f0f3ff;
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 1.5rem;
+    align-self: flex-start;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.toc-title {
+    margin: 0 0 0.6rem 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666a8c;
+}
+
+.containerProject--detailed .toc-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.containerProject--detailed .toc-sidebar li {
+    margin-bottom: 0.4rem;
+}
+
+/* Links in the TOC sidebar only */
+.containerProject--detailed .toc-sidebar a {
+    text-decoration: none;
+    color: #1f2755;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.containerProject--detailed .toc-sidebar a:hover {
+    color: #6391e6;
+}
+
+/* Content column */
+.containerProject--detailed .article-content {
+    flex: 1;
+}
+
+/* Links in the detailed article content (Prototype, Demo, etc.) */
+.containerProject--detailed .article-content a,
+.containerProject--detailed .link-visibility {
+    color: #6391e6;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.containerProject--detailed .article-content a:hover,
+.containerProject--detailed .link-visibility:hover {
+    text-decoration: underline;
+}
+
+/* --------- Wireframes (image gallery & figma embed) --------- */
+
+.wireframe-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.wireframe-item {
+    flex: 1 1 200px;
+    max-width: 260px;
+    text-align: center;
+}
+
+.wireframe-item img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wireframe-item figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.wireframe-link {
+    margin-top: 1rem;
+}
+
+.wireframe-link a {
+    text-decoration: none;
+    font-style: italic;
+    color: #6391e6;
+}
+
+/* Responsive Figma embed */
+
+.figma-embed-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 0.75rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.figma-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    aspect-ratio: 16 / 9;
+}
+
+/* --------- Responsive tweaks for smaller screens --------- */
+
+@media (max-width: 900px) {
+    .infoProject {
+        flex-direction: column;
+    }
+
+    /* Only detailed projects change article layout on small screens */
+    .containerProject--detailed .infoProject article {
+        display: block;
+    }
+
+    .containerProject--detailed .toc-sidebar {
+        position: static;
+        max-height: none;
+        margin-bottom: 1rem;
+    }
+
+    .infoProject img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerProject {
+        padding: 1.3rem 1.1rem;
+    }
+
+    .containerProject h3 {
+        font-size: 1.25rem;
+    }
+}

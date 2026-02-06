@@ -12,9 +12,13 @@ body, html {
     background-size: 400px auto, cover;  /* downsize the huge image */
     background-repeat: repeat;
     background-blend-mode: color-burn;
-}
-#homepage{
+    min-height: 100vh;
 
+}
+@media (max-width: 768px) {
+    body#homepage {
+        background-attachment: scroll;  /* FIX voor mobiel */
+    }
 }
 /*---------------------------start screen-------------------------------------------------------------------------------*/
 /* Keyhole effect */
@@ -380,7 +384,7 @@ body, html {
 }
 .overlay-inner {
     position: relative;
-    width: 90%;
+    /*width: 90%;*/
     max-width: 1200px;
     height: 80vh;
     background: #ffffff;
@@ -436,6 +440,7 @@ body, html {
     body, html {
         overflow-y: auto;
         overflow-x: hidden;
+        height: auto;
     }
 
     #welcome-container {

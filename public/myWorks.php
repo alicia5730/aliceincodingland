@@ -77,7 +77,6 @@ HTML;
 <li>Resolution – If correct, the safe opens immediately. If not, teams re-check their puzzles.</li>
 HTML;
 
-        /* ---- Wireframes (you are using the Figma embed only) ---- */
 
         $wireframes = <<<HTML
 <div class="figma-embed-wrapper">
@@ -85,7 +84,6 @@ HTML;
 </div>
 HTML;
 
-        /* ---- Hi-Fi Design + Design Rationale ---- */
 
         $hiFiPoints = <<<HTML
 <li><strong>Consistent layout:</strong> All puzzle cards follow the same structure (title → puzzle → hint → code position), reducing cognitive load under time pressure.</li>
@@ -95,7 +93,6 @@ HTML;
 <li><strong>Dedicated hint area:</strong> Hints are separated from the puzzle to avoid confusion and improve scanning.</li>
 HTML;
 
-        /* ---- Interaction States ---- */
 
         $testingSetup = "We tested the escape room with 2 student teams (4–6 participants total) from other project groups. Each team received the four puzzle cards and the safe. We observed how much explanation they needed, where confusion occurred, and whether the five-minute time limit was realistic.";
 
@@ -111,7 +108,6 @@ HTML;
 <li><strong>Puzzle set – before → after:</strong> Reduced text, improved readability, and aligned all cards to a shared grid and visual style.</li>
 HTML;
 
-        /* ---- Final Result (no demo/video available) ---- */
 
         $linkPrototype = "";
         $linkDemo = "";
@@ -124,7 +120,136 @@ HTML;
 
         ?>
 
+        <?php
+        $projectTitle    = "Mobile App: Finding and Claiming Meeting Rooms";
+        $projectImage    = "Mobile_app.png";
+        $projectImageAlt = "Mobile app for finding and claiming meeting rooms";
 
+        $projectOneLiner = "A mobile app concept that helps office users quickly find, filter, claim and navigate to available meeting rooms.";
+
+        $projectRole  = "UX/UI designer";
+        $projectTeam  = "Group project – I mainly worked on the UX/UI design, screen structure and interaction flow.";
+        $projectTools = "Figma, low-fidelity wireframes, mid-fidelity prototype, high-fidelity prototype";
+
+        $projectContext = "This project focused on designing a mobile application for managing meeting rooms in an office environment. The aim was to create a clear and efficient experience for users who need to quickly find and reserve a suitable room.";
+        $projectProblem = "In busy office environments, users often waste time searching for available meeting rooms or arrive at spaces that are already occupied. There is often no clear overview of availability, room capacity or facilities.";
+        $projectGoal    = "Design a mobile app that allows users to quickly search for meeting rooms, filter options, view room details, claim a room and navigate to the correct location with as little friction as possible.";
+
+        $personaProfile = "Office employee who needs to find a meeting room on short notice.";
+        $personaGoals   = "Quickly find a suitable room, check availability, and reserve it without confusion.";
+        $personaPains   = "Lack of overview, uncertainty about room status, wasted time, and frustration when a room is unexpectedly unavailable.";
+        $personaNeeds   = "Clear room status, useful filters, fast claiming flow, and reliable feedback after each action.";
+
+        $reqMust = <<<HTML
+<li>Users must be able to see whether a room is available or occupied.</li>
+<li>Users must be able to claim a room directly from the app.</li>
+<li>The app must show practical room details such as capacity and facilities.</li>
+<li>The design must include clear feedback after claiming a room.</li>
+<li>The app must support route/navigation to the selected room.</li>
+HTML;
+
+        $reqShould = <<<HTML
+<li>Users should be able to filter rooms based on availability and facilities.</li>
+<li>The overview should be easy to scan and understand.</li>
+<li>The app should include supporting pages such as notifications, agenda or profile.</li>
+HTML;
+
+        $reqCould = <<<HTML
+<li>The app could support favourites or saved room preferences.</li>
+<li>The app could notify users when a room becomes free.</li>
+<li>The app could be expanded with additional team or calendar features.</li>
+HTML;
+
+        $userFlowIntro = "The app was designed around a practical and efficient mobile flow.";
+        $userFlowSteps = <<<HTML
+<li>The user opens the app and views an overview of meeting rooms.</li>
+<li>The user filters the list based on availability, capacity or facilities.</li>
+<li>The user opens a room detail page to inspect the room more closely.</li>
+<li>The user claims the room and receives confirmation.</li>
+<li>The user can start the route and navigate to the selected room.</li>
+HTML;
+
+        $wireframes = <<<HTML
+<div class="wireframe-gallery">
+
+    <!-- Low fidelity placeholder -->
+    <div class="wireframe-item">
+        <p><strong>Low-fidelity:</strong> Early sketches and wireframes focused on the basic structure of the app, including the room overview, filters and the claiming flow.</p>
+        <p class="wireframe-link">
+            <a href="https://www.figma.com/design/qJrYJLayOGR9wAfHuKbdXl/Mobile-app-vergaderruimtes--Versie-3?node-id=0-1" target="_blank">
+                View low-fidelity prototype in Figma
+            </a>        
+        </p>
+        <div class="figma-embed-wrapper">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/qJrYJLayOGR9wAfHuKbdXl/Mobile-app-vergaderruimtes--Versie-3?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Mid fidelity -->
+    <div class="wireframe-item">
+        <p><strong>Mid-fidelity:</strong> The design became clearer and more detailed, introducing realistic room cards, filters and interaction states.</p>
+
+        <p class="wireframe-link">
+            <a href="https://www.figma.com/design/qJrYJLayOGR9wAfHuKbdXl/Mobile-app-vergaderruimtes--Versie-3?node-id=52-134" target="_blank">
+                View mid-fidelity prototype in Figma
+            </a>
+        </p>
+
+        <div class="figma-embed-wrapper">
+            <iframe src="https://embed.figma.com/design/qJrYJLayOGR9wAfHuKbdXl/Mobile-app-vergaderruimtes--Versie-3?node-id=52-134&embed-host=share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- High fidelity -->
+    <div class="wireframe-item">
+        <p><strong>High-fidelity:</strong> The final prototype refined the visual design and made most important buttons and flows interactive.</p>
+
+        <p class="wireframe-link">
+            <a href="https://www.figma.com/site/GCq2YktxQrDtl1kCw4NczQ/High-fidelity-2?node-id=0-1&t=SzKP66d3UPCQvvp4-1" target="_blank">
+                View high-fidelity prototype in Figma
+            </a>
+        </p>
+
+        <div class="figma-embed-wrapper">
+               <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/site/GCq2YktxQrDtl1kCw4NczQ/High-fidelity-2?node-id=0-1&embed-host=share" allowfullscreen></iframe>        </div>
+    </div>
+
+</div>
+HTML;
+
+        $hiFiPoints = <<<HTML
+<li><strong>Clear room cards:</strong> each meeting room is presented with essential information such as name, availability and relevant details.</li>
+<li><strong>Useful filtering:</strong> users can narrow down options quickly, which supports fast decision-making.</li>
+<li><strong>Strong feedback states:</strong> the app communicates when a room is available, claimed or no longer available.</li>
+<li><strong>Task-based navigation:</strong> supporting pages such as profile, notifications and agenda make the app feel more complete and realistic.</li>
+<li><strong>Mobile-first design:</strong> the interface is designed to make important actions easy to perform on a phone screen.</li>
+HTML;
+
+        $testingSetup = "The project was developed iteratively through multiple low-fidelity, mid-fidelity and high-fidelity versions. Feedback from the design process was used to refine the structure, room states and overall clarity of the app.";
+        $testingFindings = <<<HTML
+<li><strong>Clarity improved over time:</strong> later versions communicate room status more clearly than the first rough concepts.</li>
+<li><strong>The claim flow became stronger:</strong> later screens provide clearer confirmation and better feedback around room reservation.</li>
+<li><strong>The app became more complete:</strong> the design evolved from a basic room overview into a fuller mobile experience with supporting screens and more realistic interactions.</li>
+HTML;
+
+        $iterations = <<<HTML
+<li><strong>Low-fidelity – version 1 → version 2:</strong> After receiving feedback from Jozua, I simplified the wireframes by removing long sentences and detailed explanations. I kept only the most important information on each screen, such as room name, availability status and number of people. The rest was replaced with short labels and placeholders, which made the wireframes feel more like true low-fidelity sketches and much easier to scan.</li>
+
+<li><strong>Low-fidelity – version 2 → version 3:</strong> Ruben pointed out that the overall flow was already clear, but that some buttons and text could be placed more logically. Based on that feedback, I adjusted the layout to improve usability and visual hierarchy. For example, I moved the <em>Claim</em> button further to the right so it would be easier to reach on a phone screen, especially in situations where the user needs to act quickly. I also cleaned up parts of the layout to make the overview feel more structured and user-friendly.</li>
+
+<li><strong>Mid-fidelity – map details popup:</strong> Jozua’s feedback confirmed that the flow and visual ideas were already working well, especially the way occupied rooms were shown on the map. Ruben noticed one small usability issue: the popup on the map page was missing a close icon. I added this in the next iteration, which made the interaction more complete and intuitive without changing the overall structure of the design.</li>
+<li><strong>High-fidelity – usability improvements after testing:</strong> Based on the results of the usability test, I made several small improvements to make the prototype clearer and easier to use. During testing, some users had to briefly search for certain functions, such as viewing their claims. To improve this, I reviewed the placement and visibility of specific buttons and interface elements. I also paid extra attention to the overall clarity of the screens by structuring content more clearly and making important elements easier to notice. These adjustments made the prototype more intuitive and brought it closer to what users expected.</li>
+
+HTML;
+        $linkPrototype = "https://www.figma.com/design/qJrYJLayOGR9wAfHuKbdXl/Mobile-app-vergaderruimtes--Versie-3?node-id=52-134";
+        $linkDemo      = "https://www.figma.com/site/GCq2YktxQrDtl1kCw4NczQ/High-fidelity-2?node-id=0-1&t=SzKP66d3UPCQvvp4-1";
+        $linkRepo      = "";
+
+        $reflection = "This project helped me improve my UX/UI design process for mobile applications. I learned how to structure a practical user flow, design around room availability and reservation states, and gradually refine a concept from low-fidelity wireframes to a more interactive high-fidelity prototype. A strong part of this project is the visible progression between the versions. If I continued working on it, I would test the high-fidelity flow with users and further refine the interaction details.";
+
+        $projectId = "mobile-app-meetingrooms";
+        include "Projects-2nd-year.php";
+        ?>
     </div>
 <script src="js/backButton.js"></script>
 

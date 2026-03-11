@@ -35,11 +35,11 @@
 
                 <!-- MAIN CONTENT COLUMN -->
                 <div class="article-content">
-                    <h4 id="<?= $projectId ?>-overview">Project Title + One-Liner</h4>
+                    <h4 id="<?= $projectId ?>-overview">Project Title</h4>
                     <p><strong>Title:</strong> <?= $projectTitle ?></p>
-                    <p><strong>One-liner:</strong> <?= $projectOneLiner ?></p>
+                    <p><?= $projectOneLiner ?></p>
 
-                    <h4 id="<?= $projectId ?>-role-team-tools">My Role + Team + Tools</h4>
+                    <h4 id="<?= $projectId ?>-role-team-tools">My Role, Team, Tools</h4>
                     <ul>
                         <li><strong>My role:</strong> <?= $projectRole ?></li>
                         <li><strong>Team:</strong> <?= $projectTeam ?></li>

@@ -7,10 +7,6 @@
 
 .back-btn {
     display: inline-block;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-
     padding: 6px 14px;
     border-radius: 999px;
     border: 1px solid rgba(99, 145, 230, 0.25);
@@ -24,6 +20,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    position: fixed;
 }
 
 .back-btn:hover {

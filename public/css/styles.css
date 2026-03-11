@@ -202,7 +202,53 @@ body, html {
 * {
     cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
 }
+#contact-box{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 5%;
+}
+#contact-email{
+    padding:12px 24px;
+    background:white;
+    color:#333;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right: 2%;
+    cursor: pointer;
+}
+#contact-email:hover{
+    background: #3683e4;
+}
+.linkedin-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 20px;
+    background: white;
+    color:#333;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    width:100px;
+    justify-content:center;
+    cursor: pointer;
+}
 
+.linkedin-btn img{
+    width:20px;
+    height:20px;
+}
+.linkedin-btn:hover{
+    background: #3683e4;
+
+
+}
 /*--------------------welcome animation-------------------------------------*/
 
 #welcome-container {

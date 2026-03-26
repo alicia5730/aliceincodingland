@@ -250,6 +250,128 @@ HTML;
         $projectId = "mobile-app-meetingrooms";
         include "Projects-2nd-year.php";
         ?>
+
+        <?php
+        $projectTitle    = "Campus Navigation Companion";
+        $projectImage    = "CNC.png";
+        $projectImageAlt = "Campus Navigation Companion mobile navigation app concept";
+
+        $projectOneLiner = "A mobile campus navigation concept that helps students and visitors find classrooms faster through clear step-by-step navigation, route guidance, and accessibility-focused features.";
+
+        $projectRole  = "UX/UI designer, wireframing lead, high-fidelity designer, user research contributor";
+        $projectTeam  = "Group project – Alicia Fernandes, Dannii Verweij, Siman Benhija, Jozua Breemes, Jermain Amofa";
+        $projectTools = "Figma, HTML, CSS, JavaScript, Google Forms, design thinking methods";
+
+        $projectContext = "This project was created for a design thinking assignment focused on improving the campus experience for new students and visitors at Windesheim.";
+        $projectProblem = "New students often struggle to find classrooms and buildings on campus. This can cause stress, confusion, wasted time, and arriving late to class.";
+        $projectGoal    = "Design a clear and accessible navigation solution that helps users quickly find their destination through simple screens, route support, and usability-focused interface decisions.";
+
+        $personaProfile = "A first-year student who is new to the campus, uses a smartphone daily, and needs quick help finding classrooms between lessons.";
+        $personaGoals   = "Find classrooms easily, reduce stress, and move through the campus with more confidence.";
+        $personaPains   = "Unfamiliar buildings, confusing room numbers, time pressure, and uncertainty while navigating.";
+        $personaNeeds   = "Simple navigation, visual clarity, route support, and accessible options such as better contrast and larger text.";
+
+        $reqMust = <<<HTML
+<li>The app must help users find classrooms step by step.</li>
+<li>The interface must be clear and easy to understand for new students.</li>
+<li>The app must include route guidance between locations.</li>
+<li>The design must support accessibility features.</li>
+<li>The app must reduce stress and confusion while navigating campus.</li>
+HTML;
+
+        $reqShould = <<<HTML
+<li>The app should include alternative route options.</li>
+<li>The app should connect useful screens such as home and route pages.</li>
+<li>The app should provide notifications when a lesson is about to start.</li>
+<li>The app should support visual accessibility improvements such as high contrast and larger text.</li>
+HTML;
+
+        $reqCould = <<<HTML
+<li>The app could support multilingual navigation.</li>
+<li>The app could show quieter or more accessible route options.</li>
+<li>The app could be expanded with more personalized campus assistance features.</li>
+HTML;
+
+        $userFlowIntro = "The user flow was designed to keep navigation simple, focused, and easy to follow for students under time pressure.";
+        $userFlowSteps = <<<HTML
+<li>The user opens the app and starts from the home screen.</li>
+<li>The user searches for a classroom or selects a destination.</li>
+<li>The user views the selected room and opens the route page.</li>
+<li>The user follows the route guidance step by step.</li>
+<li>The user receives extra support through accessible settings or helpful notifications.</li>
+<li>The user arrives at the correct classroom with less stress and uncertainty.</li>
+HTML;
+
+        $wireframes = <<<HTML
+    <!-- Low fidelity -->
+    <div class="wireframe-item"> 
+        <p><strong>Wireframes:</strong> Alicia’s wireframe direction was selected as the foundation for the final concept because of its clear structure and strong presentation of the app’s main functions.</p>
+        <p><strong>Low-fidelity:</strong> Early wireframes focused on the basic navigation flow, including selecting a destination, viewing room details, and accessing the route page.</p> 
+        <p class="wireframe-link">
+            <a href="https://www.figma.com/design/z6kuaXnNkLJRXiffyyJ7Qw/CNC-low---high-fidelity?node-id=0-1" target="_blank">
+                View low-fidelity prototype in Figma
+            </a>        
+        </p>
+        <div class="figma-embed-wrapper">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/z6kuaXnNkLJRXiffyyJ7Qw/CNC-low---high-fidelity?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- High fidelity --> 
+    <div class="wireframe-item"> 
+        <p><strong>High-fidelity:</strong> The final prototype refined the navigation experience with clearer route guidance, improved visual hierarchy, and accessibility features such as better contrast and readable text sizes.</p> 
+
+        <p class="wireframe-link"> 
+            <a href="https://www.figma.com/design/z6kuaXnNkLJRXiffyyJ7Qw/CNC-low---high-fidelity?node-id=1-176" target="_blank"> 
+                View high-fidelity prototype in Figma 
+            </a> 
+        </p> 
+
+        <div class="figma-embed-wrapper"> 
+               <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/z6kuaXnNkLJRXiffyyJ7Qw/CNC-low---high-fidelity?node-id=1-176&embed-host=share" allowfullscreen></iframe>
+        </div> 
+    </div> 
+
+HTML;
+
+        $hiFiPoints = <<<HTML
+<li><strong>Clear structure:</strong> The screens were designed to guide users through the navigation process without overwhelming them.</li>
+<li><strong>Micro-focused screens:</strong> Each screen concentrates on one main action, making the flow easier to follow.</li>
+<li><strong>Accessibility improvements:</strong> Extra attention was given to contrast, text size, and route clarity.</li>
+<li><strong>Navigation support:</strong> The design includes route-related pages and helpful interface links between important screens.</li>
+<li><strong>Contextual support:</strong> Additional features such as reminder popups improve the user experience in time-sensitive situations.</li>
+HTML;
+
+        $testingSetup = "The concept was tested manually to evaluate important navigation flows, including route usage and route alternatives. Alicia contributed to the test setup and carried out part of the testing.";
+        $testingFindings = <<<HTML
+<li><strong>Route flow worked clearly:</strong> The route page supported the main navigation task effectively.</li>
+<li><strong>Alternative route logic was understandable:</strong> Users could switch between route options more easily.</li>
+<li><strong>Small usability improvements were still needed:</strong> Interface details such as clarity, visibility, and accessibility could be refined further.</li>
+HTML;
+
+        $iterations = <<<HTML
+<li><strong>From individual concepts to one shared direction:</strong> In the early design phase, every team member created their own low-fidelity wireframes. Comparing these different ideas helped the team identify the strongest elements, such as the map-based navigation, schedule integration, and step-by-step flow, which were then combined into one clearer concept.</li>
+
+<li><strong>Core navigation flow became stronger:</strong> The project was iterated by improving the main user journey from the home page to the route page. The connection between screens became more logical, making it easier for users to search for a room, select a destination, and immediately continue to navigation.</li>
+
+<li><strong>More useful route options were added:</strong> The route experience was expanded beyond one standard path. Later iterations introduced alternative route types, such as accessible routes and quiet routes, making the concept more inclusive and more useful in realistic campus situations.</li>
+
+<li><strong>The app became more complete through extra pages and settings:</strong> The concept was refined by adding and improving supporting parts of the app, including the home page, language selection, profile-related features, and settings that could be applied across multiple pages. This made the prototype feel more like a connected product instead of separate loose screens.</li>
+
+<li><strong>High-fidelity design improved clarity and accessibility:</strong> During later iterations, the visual design became more polished and easier to use. The team improved structure, visual hierarchy, and accessibility by paying more attention to readable text, stronger contrast, and clearer interactive elements.</li>
+
+<li><strong>Testing led to practical improvements:</strong> After usability testing, the team refined important flows such as route following, route switching, and feedback moments in the interface. Features like the 10-minute lesson notification and direct navigation support helped make the app more relevant for students under time pressure.</li>
+HTML;
+
+        $linkPrototype = "https://www.figma.com/design/z6kuaXnNkLJRXiffyyJ7Qw/CNC-low---high-fidelity?node-id=1-176";
+        $linkDemo = "https://www.figma.com/design/z6kuaXnNkLJRXiffyyJ7Qw/CNC-low---high-fidelity?node-id=0-1";
+        $linkRepo = "https://github.com/yehoshuaa/Hackaton";
+
+        $reflection = "This project helped me strengthen my UX/UI design process from research to final interface decisions. My main contributions focused on HMW questions 4 and 5, the first user flows, user research, one persona, UI pattern choices, wireframes, the route page, linking the home and route flow, the high-fidelity design, the test setup, and accessibility improvements such as contrast and larger text. I also worked on a popup feature that warns users when a lesson starts in 10 minutes. A big milestone for me was that my wireframe direction was chosen as the base for the final design. Through this project, I learned how to translate user needs into a clearer navigation flow and how small interface decisions can reduce stress for students. If I continued this project, I would test the concept with more users and further improve the route guidance and accessibility features.";
+
+        $projectId = "campus-navigation-companion";
+        include "Projects-2nd-year.php";
+        ?>
     </div>
 <script src="js/backButton.js"></script>
 
